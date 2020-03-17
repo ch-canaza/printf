@@ -1,36 +1,49 @@
-#include "holberton.h"
-
 /**
- * print_single_char - Entry function
- * @c: operator
+ * print_decimal - Entry function
+ * @d: operator
  * Return: function
  */
-int print_single_char(va_list c)
+int print_decimal(va_list d)
 {
-	char var = (char) va_arg(c, int);
+	int dstring, num;
+	int negative = 0;
 
-	_putchar(var);
-	return (1);
+	dstring = va_arg(d, int)
+	if (dstring < 0)
+	{
+		_putchar('-');
+		num = (dstring * -1);
+		negative = 1;
+	}
+	else
+	{
+		num = dstring;
+	}
+
+	if (num > 9)
+		return (negative + the_range(num));
+	_putchar(num + '0');
+	return (1 + negative);
 }
 
 /**
- * print_string_char - Entry function
- * @s: operator
- * Return: function
+ * the_range - function to find n
+ *@n: number of members
+ * Return:0
  */
-int print_string_char(va_list s)
+int the_range(unsigned int n)
 {
-	char *string;
-	int k;
+	unsigned int number, charnum;
+	int count = 0;
 
-	string = va_arg(s, char*);
-	if (string == NULL)
+	if (n != 0)
 	{
-		string = "(null)";
+		number = (n / 10);
+		charnum = (n % 10);
+		count += the_range(number);
+		count++;
+		_putchar(charnum + '0');
+		return (count);
 	}
-	for (k = 0 ; string[k] != '\0' ; k++)
-	{
-	_putchar (string[k]);
-	}
-	return (k);
+	return (0);
 }
