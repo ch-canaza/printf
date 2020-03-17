@@ -24,14 +24,22 @@ typedef struct Pf_func
  * @format: operator
  * Return: function
  */
-int _putchar(char c); /*prototype putchar*/
 int _printf(const char *format, ...); /*prototype printf*/
+/**
+ *_putchar-printing character
+ * @c:character to be printed
+ * Return: 0
+ */
+int _putchar(char c); /*prototype putchar*/
 int _strcmp(const char *s1, char *s2);
 int (*get_op_func(const char *s, int pos))(va_list);
 
-
+int _pow_recursion(int x, int y);
 int print_single_char(va_list c);
 int print_string_char(va_list s);
-
+int print_int(va_list i);
+int print_dec(va_list d);
+int print_decimal(va_list d);
+int the_range(unsigned int n);
 /*prototype function that compares two strings.*/
 #endif /* HOLBERTON_H */
