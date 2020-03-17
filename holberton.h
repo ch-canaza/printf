@@ -24,8 +24,9 @@ typedef struct Pf_func
  * @format: operator
  * Return: function
  */
+int _putchar(char c); /*prototype putchar*/
 int _printf(const char *format, ...); /*prototype printf*/
-int _strcmp(const char *s1, char *s2);s
+int _strcmp(const char *s1, char *s2);
 int (*get_op_func(const char *s, int pos))(va_list);
 
 
