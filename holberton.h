@@ -8,23 +8,26 @@
 #include <stdarg.h>
 
 /**
- * struct Pf_func - Entry point
- * Desc: Entry
- *@f: pointer
- *@a: int value
- *@b: int value
- *@op: char pointer
- */
+ * struct Pf_func - format
+ * _printf- print function
+ * @op: pointer
+ * @f: function pointer
+*/
 typedef struct Pf_func
 {
 	char *op;
 	int (*f)(va_list);
 } print_fun;
 
+/**
+ * _printf - Entry function
+ * @format: operator
+ * Return: function
+ */
 int _printf(const char *format, ...); /*prototype printf*/
-int _strcmp(const char *s1, char *s2);
+int _strcmp(const char *s1, char *s2);s
 int (*get_op_func(const char *s, int pos))(va_list);
-int _putchar(char c); /*prototype putchar*/
+
 
 int print_single_char(va_list c);
 int print_string_char(va_list s);

@@ -8,8 +8,8 @@
 int _printf(const char *format, ...)
 {
 	va_list mylist;
-	unsigned int i=0, j = 0;
-	
+	unsigned int i = 0, j = 0;
+
 	if (!format)
 	{
 		return (-1);
@@ -20,23 +20,23 @@ int _printf(const char *format, ...)
 	}
 	va_start(mylist, format);
 
-	for (i=0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		if(format[i]== '%')
+		if (format[i] == '%')
 		{
-			if(format[i + 1] == '%')
+			if (format[i + 1] == '%')
 			{
-				i ++;
+				i++;
 				_putchar ('%');
 			}
 			else if (get_op_func(format, i + 1) != NULL)
 			{
-				j +=(get_op_func(format, i + 1))(mylist);
+				j += (get_op_func(format, i + 1))(mylist);
 				i++;
 			}
 		}
 		else
-		{	
+		{
 			_putchar(format[i]);
 			j++;
 		}
@@ -47,6 +47,7 @@ int _printf(const char *format, ...)
 /**
  * get_op_func - Entry function
  * @s: operator
+ * @pos: position
  * Return: function
  */
 int (*get_op_func(const char *s, int pos))(va_list)
@@ -67,4 +68,3 @@ int (*get_op_func(const char *s, int pos))(va_list)
 	}
 	return (NULL);
 }
-	
