@@ -8,6 +8,7 @@
 int print_single_char(va_list c)
 {
 	char var = (char) va_arg(c, int);
+
 	_putchar(var);
 	return (1);
 }
@@ -27,10 +28,9 @@ int print_string_char(va_list s)
 	{
 		string = "(null)";
 	}
-	for (k=0 ; string[k] != '\0' ; k++)
+	for (k = 0 ; string[k] != '\0' ; k++)
 	{
-	_putchar(string[k]);
+	_putchar (string[k]);
 	}
-	return(k);
+	return (k);
 }
-
