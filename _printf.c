@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	va_list mylist;
 	unsigned int i = 0, j = 0;
 
-	if (!format || format[0] == '%' && format[1] == '\0')
+	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
 	va_start(mylist, format);
