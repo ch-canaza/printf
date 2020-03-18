@@ -1,4 +1,4 @@
-> # printf
+> # 0x11. C - printf
 ---
 ![readme](https://img.shields.io/badge/readme-OK-green.svg?colorB=00C106)
 ---
@@ -11,9 +11,25 @@
 * `va_copy (man 3 va_copy)`
 * `va_arg (man 3 va_arg)`
 ---
+> ### Introduction
+Project in which the operation of the printf `(_printf)` is simulated, which receives `string`, `single char`, `integer`, `decimals`, and the character percentage `(%)`
+---
+> ### Documentation
+To use this function that simulates the printf, you must clone the repository `[printf](https://github.com/ch-canaza/printf)` to the repository where you are working, and you must include the contents of the folder holberton.h in your folder.h
+---
+> ### Extra information
+
+### What’s Included?
+|file|description| 
+|----|-----------|
+|  `_printf.c`  | simulates original printf | 
+|  `_putchar.c` | simulates original putchar | 
+|  `_printf_function.c`  | contains functions for the printf | 
+| `holberton.h` | contains prototypes and libraries| 
+---
 > ### Compilation
 Your code will be compiled this way:
-`gcc -Wall -Werror -Wextra -pedantic *.c`
+`gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c`
 * As a consequence, be careful not to push any c file containing a `main` function in the root directory of * * your project (you could have a test folder containing all your `tests` files including `main` functions)
 * Our main files will include your main header file (`holberton.h`): `#include holberton.h`
 * You might want to look at the gcc flag `-Wno-format` when testing with your `_printf` and the standard `printf`.
@@ -45,7 +61,7 @@ Handle the following conversion specifiers:
 ### 2. Just because it's in print doesn't mean it's the gospel
 Create a man page for your function.
 ---
-> ## contact 💬
+> ## Contact 💬
 > Ricardo Camayo
 ### | [twitter](https://twitter.com/RICARDO1470) | [linkedin](https://www.linkedin.com/in/ricardo-alfonso-camayo/) | [mail](1466@holbertonschool.com) | [github](https://github.com/ricardo1470/README/blob/master/README.md) |
 
