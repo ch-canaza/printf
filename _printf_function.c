@@ -7,6 +7,7 @@
 int print_single_char(va_list c)
 {
 	char var = (char) va_arg(c, int);
+
 	_putchar(var);
 	return (1);
 }
@@ -30,7 +31,7 @@ int print_string_char(va_list s)
 		_putchar (string[k]);
 	}
 	return (k);
-} 
+}
 
 /**
  * print_decimal - Entry function
