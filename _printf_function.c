@@ -40,21 +40,21 @@ int print_string_char(va_list s)
  */
 int print_decimal(va_list d)
 {
-	int dstring, num;
+	int dstring;
 	int negative = 0;
+	unsigned int num;
 
 	dstring = va_arg(d, int);
 	if (dstring < 0)
 	{
 		_putchar('-');
-		num = (dstring * -1);
 		negative = 1;
+		num = dstring * -1;
 	}
 	else
 	{
 		num = dstring;
 	}
-
 	if (num > 9)
 		return (negative + the_range(num));
 	_putchar(num + '0');
